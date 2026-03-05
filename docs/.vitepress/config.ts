@@ -4,8 +4,9 @@ export default defineConfig({
   title: 'ClawInstaller',
   description: '3 分鐘啟動你的 AI 團隊 — OpenClaw macOS 安裝精靈',
   lang: 'zh-TW',
+  base: '/website/',
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'icon', href: '/website/logo.png' }],
   ],
   themeConfig: {
     logo: '/logo.png',
