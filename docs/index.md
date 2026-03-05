@@ -117,8 +117,9 @@ features:
 </div>
 
 <style>
+/* ── Comparison Section ── */
 .comparison-section {
-  max-width: 900px;
+  max-width: 960px;
   margin: 2rem auto 0;
   padding: 3rem 1.5rem;
 }
@@ -135,28 +136,53 @@ features:
 }
 .comparison-table-wrapper {
   overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
 }
 .comparison-table-wrapper table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.comparison-table-wrapper thead tr {
+  border-bottom: 2px solid var(--vp-c-divider);
 }
 .comparison-table-wrapper th {
   background: var(--vp-c-bg-soft);
-  padding: 1rem 0.75rem;
+  padding: 1.1rem 1rem;
   font-size: 0.95rem;
+  vertical-align: bottom;
+}
+/* Highlight ClawInstaller column header */
+.comparison-table-wrapper th:nth-child(2) {
+  background: rgba(249, 115, 22, 0.08);
+  border-bottom: 3px solid #f97316;
 }
 .comparison-table-wrapper td {
-  padding: 0.75rem;
+  padding: 0.85rem 1rem;
   text-align: center;
   border-bottom: 1px solid var(--vp-c-divider);
+  line-height: 1.5;
+}
+/* Highlight ClawInstaller column cells */
+.comparison-table-wrapper td:nth-child(2) {
+  background: rgba(249, 115, 22, 0.04);
 }
 .comparison-table-wrapper td:first-child {
   text-align: left;
   font-weight: 600;
   white-space: nowrap;
+  color: var(--vp-c-text-2);
 }
-.comparison-table-wrapper tr:hover {
+.comparison-table-wrapper tr:hover td {
   background: var(--vp-c-bg-soft);
+}
+.comparison-table-wrapper tr:hover td:nth-child(2) {
+  background: rgba(249, 115, 22, 0.1);
+}
+/* Remove bottom border on last row */
+.comparison-table-wrapper tr:last-child td {
+  border-bottom: none;
 }
 .win {
   color: #f97316;
@@ -171,35 +197,45 @@ features:
   color: var(--vp-c-text-3);
   font-size: 0.85em;
 }
+
+/* ── CTA Banner ── */
 .comparison-cta {
   text-align: center;
-  margin-top: 2rem;
-  padding: 1.5rem;
+  margin-top: 2.5rem;
+  padding: 2rem 1.5rem;
   background: linear-gradient(135deg, #fff7ed, #ffedd5);
-  border-radius: 12px;
+  border-radius: 16px;
   border: 1px solid #fed7aa;
 }
 .dark .comparison-cta {
-  background: linear-gradient(135deg, #431407, #7c2d12);
-  border-color: #9a3412;
+  background: linear-gradient(135deg, rgba(249,115,22,0.12), rgba(249,115,22,0.06));
+  border-color: rgba(249,115,22,0.3);
+}
+.comparison-cta strong {
+  font-size: 1.1rem;
 }
 .comparison-cta a {
   display: inline-block;
-  margin-top: 0.75rem;
-  padding: 0.6rem 1.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
   background: #f97316;
   color: white !important;
   border-radius: 99px;
   font-weight: 700;
+  font-size: 1rem;
   text-decoration: none !important;
-  transition: background 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
 }
 .comparison-cta a:hover {
   background: #ea580c;
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+  transform: translateY(-1px);
 }
 
+/* ── Audience Section ── */
 .audience-section {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
 }
@@ -224,6 +260,11 @@ features:
   border-radius: 12px;
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.audience-card:hover {
+  border-color: #f97316;
+  transform: translateY(-2px);
 }
 .audience-icon {
   font-size: 1.5rem;
@@ -237,8 +278,9 @@ features:
   line-height: 1.5;
 }
 
+/* ── Final CTA ── */
 .final-cta {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 3rem 1.5rem 4rem;
   text-align: center;
@@ -267,9 +309,14 @@ features:
   font-weight: 700;
   font-size: 1.05rem;
   text-decoration: none !important;
-  transition: background 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
 }
-.cta-primary:hover { background: #ea580c; }
+.cta-primary:hover {
+  background: #ea580c;
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+  transform: translateY(-1px);
+}
 .cta-secondary {
   display: inline-block;
   padding: 0.75rem 2rem;
@@ -279,7 +326,10 @@ features:
   font-size: 1.05rem;
   color: var(--vp-c-text-1) !important;
   text-decoration: none !important;
-  transition: border-color 0.2s;
+  transition: all 0.2s;
 }
-.cta-secondary:hover { border-color: #f97316; }
+.cta-secondary:hover {
+  border-color: #f97316;
+  transform: translateY(-1px);
+}
 </style>
