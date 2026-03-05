@@ -1,0 +1,15 @@
+{
+  "name": "@clawinstaller/website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ClawInstaller 繁體中文文件站",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
