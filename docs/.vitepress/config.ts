@@ -15,6 +15,7 @@ export default defineConfig({
       { text: '新手教學', link: '/guide/getting-started' },
       { text: 'FAQ', link: '/faq/' },
       { text: 'GitHub', link: 'https://github.com/clawinstaller/claw-installer' },
+      { text: '下載', link: 'https://github.com/clawinstaller/claw-installer/releases' },
     ],
     sidebar: {
       '/guide/': [

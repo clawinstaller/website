@@ -43,6 +43,55 @@
   --cl-border-muted: #52525B;
 }
 
+/* ─── Nav Bar — match Pencil design ─── */
+
+/* Logo image: rounded corners (10px) */
+.VPNavBarTitle .logo {
+  border-radius: 10px !important;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+/* Logo text: JetBrains Mono bold */
+.VPNavBarTitle .title {
+  font-family: 'JetBrains Mono', ui-monospace, monospace !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+/* Nav links: Geist font, 13px, medium weight */
+.VPNavBarMenu .VPNavBarMenuLink {
+  font-family: var(--cl-font-body) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+/* Last nav link ("下載") → orange pill button */
+.VPNavBarMenu .VPNavBarMenuLink:last-child {
+  background: var(--cl-orange) !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  padding: 6px 14px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  transition: background 0.2s !important;
+}
+
+.VPNavBarMenu .VPNavBarMenuLink:last-child:hover {
+  background: var(--cl-orange-hover) !important;
+  color: #fff !important;
+}
+
+/* Cleaner nav bar height */
+.VPNav .VPNavBar {
+  height: 56px !important;
+}
+
+.VPNav .VPNavBar .container {
+  max-width: 1200px !important;
+}
+
 /* On landing page: remove default VitePress content padding and footer */
 .Layout:has(.landing) .VPContent {
   padding-top: 0;
