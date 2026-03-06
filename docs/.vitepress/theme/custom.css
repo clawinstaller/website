@@ -1,0 +1,64 @@
+/* Google Fonts — must be first */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+
+/* Brand tokens */
+:root {
+  --cl-orange: #FF8400;
+  --cl-orange-hover: #E67600;
+  --cl-orange-light: #FFF7ED;
+  --cl-orange-border: #FDBA74;
+  --cl-orange-glow: rgba(255, 132, 0, 0.25);
+  --cl-text-primary: #111111;
+  --cl-text-secondary: #71717A;
+  --cl-text-muted: #666666;
+  --cl-bg-page: #FAFAFA;
+  --cl-bg-white: #FFFFFF;
+  --cl-bg-soft: #F4F4F5;
+  --cl-bg-agents: #F2F3F0;
+  --cl-border: #E4E4E7;
+  --cl-border-muted: #CBCCC9;
+  --cl-green: #22C55E;
+  --cl-red: #EF4444;
+  --cl-teal: #14B8A6;
+  --cl-purple: #8B5CF6;
+  --cl-font-display: 'JetBrains Mono', ui-monospace, monospace;
+  --cl-font-body: 'Geist', 'Inter', -apple-system, sans-serif;
+
+  /* Override VitePress brand color */
+  --vp-c-brand-1: #FF8400;
+  --vp-c-brand-2: #E67600;
+  --vp-c-brand-3: #CC6900;
+  --vp-c-brand-soft: rgba(255, 132, 0, 0.14);
+}
+
+.dark {
+  --cl-text-primary: #F5F5F5;
+  --cl-text-secondary: #A1A1AA;
+  --cl-text-muted: #888888;
+  --cl-bg-page: #0A0A0A;
+  --cl-bg-white: #18181B;
+  --cl-bg-soft: #27272A;
+  --cl-bg-agents: #1C1C1F;
+  --cl-border: #3F3F46;
+  --cl-border-muted: #52525B;
+}
+
+/* On landing page: remove default VitePress content padding and footer */
+.Layout:has(.landing) .VPContent {
+  padding-top: 0;
+}
+
+.Layout:has(.landing) .VPFooter {
+  display: none;
+}
+
+/* Remove VitePress doc wrapper constraints on landing page */
+.Layout:has(.landing) .vp-doc {
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+.Layout:has(.landing) .VPDoc .container .content {
+  max-width: none !important;
+  padding: 0 !important;
+}
