@@ -82,7 +82,7 @@ const comparison = {
 }
 
 const faqs = [
-  { q: 'ClawInstaller 是官方產品嗎？', a: '不是。ClawInstaller 是社群驅動的非官方開源專案（MIT 授權），旨在降低 OpenClaw 的入門門檻。與 OpenClaw 官方團隊無關。' },
+  { q: 'ClawInstaller 是官方產品嗎？', a: 'ClawInstaller 是獨立的社群開源專案（MIT 授權），為降低 OpenClaw 的入門門檻而生。我們不隸屬於 OpenClaw，但致力於讓更多人輕鬆上手。' },
   { q: '真的完全免費嗎？有隱藏費用嗎？', a: '完全免費，沒有任何隱藏費用。安裝、監控、頻道設定全部免費。唯一的花費是你自己的 LLM API Key（例如 OpenAI、Anthropic），但那是你直接付給 AI 廠商的。' },
   { q: '支援哪些 Mac 機型？', a: '同時支援 Apple Silicon（M1/M2/M3/M4）和 Intel Mac，需要 macOS 14.0 以上版本，至少 500 MB 可用空間。' },
   { q: '我的資料安全嗎？', a: '絕對安全。所有資料（API Key、對話記錄、設定檔）100% 留在你的 Mac 上，不經過任何第三方伺服器。你的隱私由你自己掌控。' },
