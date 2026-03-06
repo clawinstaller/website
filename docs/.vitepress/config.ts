@@ -1,15 +1,10 @@
 import { defineConfig } from 'vitepress'
 
-export default defineConfig({
-  title: 'ClawInstaller',
-  description: '3 分鐘啟動你的 AI 團隊 — OpenClaw macOS 安裝精靈',
+const zhTW = {
+  label: '繁體中文',
   lang: 'zh-TW',
-  base: '/website/',
-  head: [
-    ['link', { rel: 'icon', href: '/website/logo.png' }],
-  ],
+  description: '3 分鐘啟動你的 AI 團隊 — OpenClaw macOS 安裝精靈',
   themeConfig: {
-    logo: '/logo.png',
     nav: [
       { text: '首頁', link: '/' },
       { text: '新手教學', link: '/guide/getting-started' },
@@ -44,19 +39,84 @@ export default defineConfig({
         },
       ],
     },
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/clawinstaller' },
-    ],
     footer: {
       message: '以 MIT 授權釋出',
       copyright: '© 2026 ClawInstaller 社群',
     },
-    search: {
-      provider: 'local',
-    },
     editLink: {
       pattern: 'https://github.com/clawinstaller/website/edit/main/docs/:path',
       text: '在 GitHub 上編輯此頁',
+    },
+  },
+}
+
+const en = {
+  label: 'English',
+  lang: 'en',
+  description: 'Launch your AI team in 3 minutes — OpenClaw macOS setup wizard',
+  themeConfig: {
+    nav: [
+      { text: 'Home', link: '/en/' },
+      { text: 'Guide', link: '/en/guide/getting-started' },
+      { text: 'FAQ', link: '/en/faq/' },
+      { text: 'GitHub', link: 'https://github.com/clawinstaller/claw-installer' },
+      { text: 'Download', link: 'https://github.com/clawinstaller/claw-installer/releases' },
+    ],
+    sidebar: {
+      '/en/guide/': [
+        {
+          text: 'Getting Started',
+          items: [
+            { text: 'Quick Start', link: '/en/guide/getting-started' },
+            { text: 'Install Flow', link: '/en/guide/install-flow' },
+            { text: 'Your Three Agents', link: '/en/guide/agents' },
+          ],
+        },
+        {
+          text: 'Advanced',
+          items: [
+            { text: 'Channel Setup', link: '/en/guide/channels' },
+            { text: 'System Monitor', link: '/en/guide/monitor' },
+          ],
+        },
+      ],
+      '/en/faq/': [
+        {
+          text: 'FAQ',
+          items: [
+            { text: 'Overview', link: '/en/faq/' },
+          ],
+        },
+      ],
+    },
+    footer: {
+      message: 'Released under the MIT License',
+      copyright: '© 2026 ClawInstaller Community',
+    },
+    editLink: {
+      pattern: 'https://github.com/clawinstaller/website/edit/main/docs/:path',
+      text: 'Edit this page on GitHub',
+    },
+  },
+}
+
+export default defineConfig({
+  title: 'ClawInstaller',
+  base: '/website/',
+  head: [
+    ['link', { rel: 'icon', href: '/website/logo.png' }],
+  ],
+  locales: {
+    root: zhTW,
+    en,
+  },
+  themeConfig: {
+    logo: '/logo.png',
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/clawinstaller' },
+    ],
+    search: {
+      provider: 'local',
     },
   },
 })
